@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Pine & Clay: CSS custom properties for shadcn/ui ──────────────────── */
+@layer base {
+  :root {
+    /* Pine (#256A5C) → hsl(168, 46%, 27%) */
+    --background:          30 30% 83%;   /* linen #EAD5C2           */
+    --foreground:          20 7%  17%;   /* charcoal #2D2B29        */
+
+    --card:                0  0% 100%;
+    --card-foreground:     20 7%  17%;
+
+    --popover:             0  0% 100%;
+    --popover-foreground:  20 7%  17%;
+
+    --primary:             168 46% 27%;  /* pine #256A5C            */
+    --primary-foreground:  0   0% 100%;
+
+    --secondary:           18 48% 49%;   /* clay #BA6444            */
+    --secondary-foreground:0   0% 100%;
+
+    --muted:               30 20% 88%;   /* linen-dark #DECAB8      */
+    --muted-foreground:    20 7%  40%;
+
+    --accent:              168 46% 27%;
+    --accent-foreground:   0   0% 100%;
+
+    --destructive:         0 84%  60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border:              30 20% 78%;
+    --input:               30 20% 78%;
+    --ring:                168 46% 27%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background:          20 7%  17%;
+    --foreground:          30 30% 83%;
+    --card:                20 7%  20%;
+    --card-foreground:     30 30% 83%;
+    --popover:             20 7%  20%;
+    --popover-foreground:  30 30% 83%;
+    --primary:             168 46% 40%;
+    --primary-foreground:  0   0% 100%;
+    --secondary:           18 48% 55%;
+    --secondary-foreground:0   0% 100%;
+    --muted:               20 7%  25%;
+    --muted-foreground:    30 20% 60%;
+    --accent:              168 46% 35%;
+    --accent-foreground:   0   0% 100%;
+    --destructive:         0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border:              20 7%  28%;
+    --input:               20 7%  28%;
+    --ring:                168 46% 40%;
+  }
+}
+
+/* ─── Base styles ───────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-lato antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
