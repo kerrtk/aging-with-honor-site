@@ -1,10 +1,8 @@
 import type { MDXComponents } from "mdx/types"
 
-import { cn } from "@/lib/utils"
-
 function Pullquote({ children }: { children: React.ReactNode }) {
   return (
-    <blockquote className="my-10 border-l-4 border-[color:var(--color-gold)] pl-6 font-display text-2xl italic leading-snug text-primary">
+    <blockquote className="my-10 border-l-4 border-crimson pl-6 font-display text-2xl font-extrabold uppercase leading-tight text-bone">
       {children}
     </blockquote>
   )
@@ -12,30 +10,17 @@ function Pullquote({ children }: { children: React.ReactNode }) {
 
 function Callout({ children, label = "Context" }: { children: React.ReactNode; label?: string }) {
   return (
-    <div className="my-8 rounded-md border border-border bg-muted p-5">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-[color:var(--color-gold-dark)]">
-        {label}
-      </p>
-      <div className="text-sm text-foreground">{children}</div>
+    <div className="my-8 border border-hair bg-panel p-5">
+      <p className="mono mb-2 text-xs text-crimson">{label}</p>
+      <div className="text-sm text-ash">{children}</div>
     </div>
-  )
-}
-
-function Figure({ caption, children }: { caption?: string; children: React.ReactNode }) {
-  return (
-    <figure className="my-8">
-      {children}
-      {caption && <figcaption className="mt-2 text-sm text-muted-foreground">{caption}</figcaption>}
-    </figure>
   )
 }
 
 function ImagePlaceholder({ label, aspect = "16/9" }: { label: string; aspect?: string }) {
   return (
     <div
-      className={cn(
-        "flex items-center justify-center rounded-md border border-dashed border-border bg-muted px-4 text-center text-sm text-muted-foreground"
-      )}
+      className="flex items-center justify-center border border-dashed border-hair bg-panel px-4 text-center font-mono text-xs uppercase tracking-widest text-steel"
       style={{ aspectRatio: aspect }}
     >
       {label}
@@ -46,6 +31,5 @@ function ImagePlaceholder({ label, aspect = "16/9" }: { label: string; aspect?: 
 export const mdxComponents: MDXComponents = {
   Pullquote,
   Callout,
-  Figure,
   ImagePlaceholder,
 }

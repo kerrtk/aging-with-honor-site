@@ -16,7 +16,6 @@ export function articleJsonLd(article: {
   slug: string
   publishedAt: Date
   updatedAt?: Date
-  authorName: string
 }) {
   return {
     "@context": "https://schema.org",
@@ -25,9 +24,9 @@ export function articleJsonLd(article: {
     description: article.dek,
     datePublished: article.publishedAt.toISOString(),
     dateModified: (article.updatedAt ?? article.publishedAt).toISOString(),
-    author: { "@type": "Person", name: article.authorName },
+    author: { "@type": "Organization", name: "Game Integrity Journal" },
     publisher: { "@type": "Organization", name: "Game Integrity Journal" },
-    mainEntityOfPage: `${SITE_URL}/articles/${article.slug}`,
+    mainEntityOfPage: `${SITE_URL}/journal/${article.slug}`,
   }
 }
 

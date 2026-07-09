@@ -4,8 +4,6 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu } from "lucide-react"
 
-import { Logo } from "@/components/logo"
-import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
 export function MobileNav({ navItems }: { navItems: { href: string; label: string }[] }) {
@@ -14,14 +12,19 @@ export function MobileNav({ navItems }: { navItems: { href: string; label: strin
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open menu">
+        <button
+          type="button"
+          aria-label="Open menu"
+          className="flex h-10 w-10 items-center justify-center text-bone"
+        >
           <Menu className="h-5 w-5" />
-        </Button>
+        </button>
       </SheetTrigger>
       <SheetContent side="right">
         <SheetHeader>
-          <SheetTitle>
-            <Logo />
+          <SheetTitle className="font-display text-lg font-extrabold uppercase tracking-tight text-bone">
+            Game<span className="text-crimson">&middot;</span>Integrity
+            <span className="text-crimson">&middot;</span>Journal
           </SheetTitle>
         </SheetHeader>
         <nav className="mt-8 flex flex-col gap-1" aria-label="Mobile">
@@ -30,18 +33,11 @@ export function MobileNav({ navItems }: { navItems: { href: string; label: strin
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-2.5 text-base font-semibold text-foreground hover:bg-accent"
+              className="rounded-sm px-3 py-2.5 font-mono text-sm uppercase tracking-widest text-bone hover:bg-panel"
             >
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/tips"
-            onClick={() => setOpen(false)}
-            className="mt-4 rounded-md px-3 py-2.5 text-base font-semibold text-[var(--color-crimson)] hover:bg-accent"
-          >
-            Submit a Tip
-          </Link>
         </nav>
       </SheetContent>
     </Sheet>
