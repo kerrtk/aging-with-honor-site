@@ -26,15 +26,18 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
 
           {/* ── Logo ─────────────────────────────────────────────── */}
-          <Link href="/" className="flex items-center flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image
-              src="/awh-logo.webp"
-              alt="Aging With Honor — Plan Today. Honor Tomorrow."
-              width={200}
-              height={78}
+              src="/awh-seal.png"
+              alt="Aging With Honor — Honor Crest seal"
+              width={56}
+              height={56}
               priority
-              className="h-14 w-auto object-contain"
+              className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
             />
+            <span className="font-playfair text-xl sm:text-2xl text-charcoal leading-none whitespace-nowrap">
+              Aging With Honor
+            </span>
           </Link>
 
           {/* ── Desktop Nav ──────────────────────────────────────── */}
