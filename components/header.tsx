@@ -30,12 +30,12 @@ export function Header() {
             <Image
               src="/awh-seal.png"
               alt="Aging With Honor — Honor Crest seal"
-              width={56}
-              height={56}
+              width={64}
+              height={64}
               priority
-              className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
+              className="h-14 w-14 sm:h-16 sm:w-16 object-contain"
             />
-            <span className="font-playfair text-xl sm:text-2xl text-charcoal leading-none whitespace-nowrap">
+            <span className="font-playfair text-lg sm:text-xl text-charcoal leading-none whitespace-nowrap">
               Aging With Honor
             </span>
           </Link>
