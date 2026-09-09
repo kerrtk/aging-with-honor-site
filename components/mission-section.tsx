@@ -4,9 +4,9 @@ import { CheckCircle } from "lucide-react"
 
 const values = [
   { title: "Faith-Centered Approach", desc: "Grounded in compassion, purpose, and the belief that every life holds sacred worth." },
-  { title: "Family & Professional Support", desc: "Resources tailored for family caregivers and certified elder care professionals alike." },
-  { title: "Practical, Actionable Guidance", desc: "Education you can apply today — not theory, but real tools for real caregiving moments." },
-  { title: "Community You Can Count On", desc: "A safe space to share, learn, and find encouragement among people who truly understand." },
+  { title: "Family & Professional Support", desc: "Resources for family caregivers and the aides, CNAs, and staff who do this work for a living." },
+  { title: "Practical, Actionable Guidance", desc: "Written for the moment you are actually in, not theory and not a brochure." },
+  { title: "Honest About Where We Are", desc: "This is a new effort. What is finished, we publish. What is not, we say so." },
 ]
 
 export function MissionSection() {
@@ -15,9 +15,7 @@ export function MissionSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
-          {/* ── Image ───────────────────────────────────────────── */}
           <div className="relative">
-            {/* Decorative pine border frame */}
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-teal/20 rounded-2xl" />
 
             <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square lg:aspect-[4/5]">
@@ -28,18 +26,10 @@ export function MissionSection() {
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              {/* Subtle gradient at bottom */}
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-teal-dark/40 to-transparent" />
-            </div>
-
-            {/* Floating stat card */}
-            <div className="absolute -bottom-5 -right-5 bg-terracotta text-white rounded-xl px-5 py-4 shadow-lg">
-              <p className="font-playfair text-3xl font-bold leading-none">15+</p>
-              <p className="font-lato text-xs mt-1 text-white/85">Years of Dedicated<br />Elder Care Education</p>
             </div>
           </div>
 
-          {/* ── Content ─────────────────────────────────────────── */}
           <div>
             <p className="font-lato text-sm font-semibold text-terracotta tracking-widest uppercase mb-3">
               Our Mission
@@ -49,9 +39,9 @@ export function MissionSection() {
               <span className="italic text-charcoal">Every Step of the Way</span>
             </h2>
             <p className="font-lato text-charcoal/70 text-lg leading-relaxed mb-8">
-              Aging With Honor exists to equip and encourage those on the caregiving journey — whether
-              you're a family member stepping in for a loved one or a certified professional serving
-              seniors every day. We believe dignity, compassion, and preparedness go hand in hand.
+              Aging With Honor exists to equip and encourage the people doing the caring,
+              whether you are a family member stepping in for someone you love or a professional
+              serving seniors every day. Dignity, compassion, and preparedness belong together.
             </p>
 
             <ul className="space-y-4 mb-10">
