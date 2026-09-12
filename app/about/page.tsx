@@ -44,10 +44,10 @@ export default function AboutPage() {
                 is simple, practical, and written down absolutely nowhere.
               </p>
               <p>
-                I was raised in Fredericksburg, Iowa by my grandparents, Vernon and Norma. Stub,
-                everybody called him. What they gave me was not money or advantage. It was the
-                understanding that you treat people with dignity all the way to the end, and that
-                showing up matters more than saying the right thing.
+                I was raised by my mom, mostly on her own. She did the work of two people and
+                never once made it sound like a burden. Some of what I know about dignity I
+                learned watching her do that. The rest I have learned since, from the other side
+                of it, now that she is the one being looked after.
               </p>
               <p>
                 Aging With Honor is my attempt to put that down on paper for the people who need
