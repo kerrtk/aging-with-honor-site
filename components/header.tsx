@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/about",               label: "About" },
   { href: "/caregiver-resources", label: "Caregiver Resources" },
   { href: "/courses",             label: "Courses" },
-  { href: "/blog",                label: "Blog" },
+  { href: "/blog",                label: "Journal" },
   { href: "/community",           label: "Community" },
   { href: "/contact",             label: "Contact" },
 ]
@@ -25,11 +25,10 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
-          {/* ── Logo ─────────────────────────────────────────────── */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image
               src="/awh-seal.png"
-              alt="Aging With Honor — Honor Crest seal"
+              alt="Aging With Honor Honor Crest seal"
               width={72}
               height={72}
               priority
@@ -40,7 +39,6 @@ export function Header() {
             </span>
           </Link>
 
-          {/* ── Desktop Nav ──────────────────────────────────────── */}
           <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <Link
@@ -57,13 +55,12 @@ export function Header() {
             ))}
           </nav>
 
-          {/* ── CTA + Mobile Toggle ──────────────────────────────── */}
           <div className="flex items-center gap-3">
             <Link
-              href="/caregiver-resources"
+              href="/contact"
               className="hidden sm:inline-flex items-center bg-terracotta text-white text-sm font-lato font-semibold px-5 py-2.5 rounded-full hover:bg-terracotta-dark transition-colors"
             >
-              Free Guide
+              Get In Touch
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -76,7 +73,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* ── Mobile Menu ────────────────────────────────────────────── */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-cream-dark">
           <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
@@ -95,11 +91,11 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/caregiver-resources"
+              href="/contact"
               onClick={() => setMobileOpen(false)}
               className="mt-3 bg-terracotta text-white text-center font-lato font-semibold py-3 px-6 rounded-full hover:bg-terracotta-dark transition-colors"
             >
-              Free Guide
+              Get In Touch
             </Link>
           </nav>
         </div>

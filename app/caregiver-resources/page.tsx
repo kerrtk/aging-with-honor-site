@@ -1,13 +1,34 @@
+import type { Metadata } from "next"
 import Link from "next/link"
-import { Download, FileText, Users, Heart, Building, Shield, ArrowRight, CheckCircle } from "lucide-react"
+import { ArrowRight, Heart, Users, Building, Shield } from "lucide-react"
 
-const categories = [
-  { icon: <Heart className="w-7 h-7 text-terracotta" />, bg: "bg-terracotta/10", title: "Family Caregiver Guides", desc: "Practical guides for families caring for aging parents or loved ones at home.", items: ["Doctor Visit Checklist", "Medication Tracking Log", "Home Safety Assessment", "End-of-Life Planning Starter"] },
-  { icon: <Users className="w-7 h-7 text-teal" />, bg: "bg-teal/10", title: "Professional Caregiver Tools", desc: "Training aids, activity kits, and communication frameworks for elder care staff.", items: ["Dementia Communication Cards", "Activity Facilitation Guide", "Caregiver Self-Care Plan", "Behavioral Response Protocol"] },
-  { icon: <Building className="w-7 h-7 text-charcoal-light" />, bg: "bg-charcoal/10", title: "Care Facility Resources", desc: "Programs and content for memory wings, assisted living, and independent living communities.", items: ["Staff Training Modules", "Family Communication Templates", "Resident Engagement Toolkit", "Partnership Program Info"] },
-  { icon: <Shield className="w-7 h-7 text-teal" />, bg: "bg-teal/10", title: "Legal & Financial Planning", desc: "Essential resources to help families plan proactively for aging transitions.", items: ["Power of Attorney Overview", "Medicare & Medicaid Primer", "Estate Planning Checklist", "Long-Term Care Insurance Guide"] },
-  { icon: <FileText className="w-7 h-7 text-terracotta" />, bg: "bg-terracotta/10", title: "Mental Health & Wellness", desc: "Emotional support resources for caregivers dealing with burnout, grief, and stress.", items: ["Caregiver Stress Assessment", "Grief Support Resources", "Mindfulness for Caregivers", "Local Support Group Finder"] },
-  { icon: <Download className="w-7 h-7 text-charcoal-light" />, bg: "bg-charcoal/10", title: "Printable Downloads", desc: "Free printables, forms, and templates ready to use today.", items: ["Daily Care Schedule Template", "Emergency Contact Sheet", "Medication Log (Monthly)", "Weekly Wellness Check-In"] },
+export const metadata: Metadata = {
+  title: "Caregiver Resources | Aging With Honor",
+  description: "Practical guides and printables for family and professional caregivers. Library in development.",
+  robots: { index: false, follow: true },
+}
+
+const planned = [
+  {
+    icon: <Heart className="w-7 h-7 text-terracotta" />, bg: "bg-terracotta/10",
+    title: "Family Caregiver Guides",
+    desc: "Doctor visits, medication tracking, home safety, and starting the planning conversation. First up, because it is what families ask for most.",
+  },
+  {
+    icon: <Users className="w-7 h-7 text-teal" />, bg: "bg-teal/10",
+    title: "Professional Caregiver Tools",
+    desc: "Communication approaches and self-care material for CNAs, aides, and memory care staff.",
+  },
+  {
+    icon: <Shield className="w-7 h-7 text-teal" />, bg: "bg-teal/10",
+    title: "Legal and Financial Basics",
+    desc: "Plain-language overviews of the paperwork families hit first. Written carefully, because getting this wrong costs people real money.",
+  },
+  {
+    icon: <Building className="w-7 h-7 text-charcoal-light" />, bg: "bg-charcoal/10",
+    title: "Care Facility Material",
+    desc: "Resident engagement and family communication tools, shaped with facilities rather than guessed at.",
+  },
 ]
 
 export default function CaregiverResourcesPage() {
@@ -17,39 +38,40 @@ export default function CaregiverResourcesPage() {
         <div className="max-w-4xl mx-auto text-center">
           <span className="text-terracotta-light text-sm font-lato font-semibold uppercase tracking-widest block mb-4">Resource Library</span>
           <h1 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">Caregiver Resources</h1>
-          <p className="text-white/80 font-lato text-lg max-w-2xl mx-auto">Free guides, printable tools, and professional training materials for family caregivers, elder care staff, and senior living communities.</p>
+          <p className="text-white/80 font-lato text-lg max-w-2xl mx-auto">The library is being built. Here is what is planned, and what is honestly not ready.</p>
         </div>
       </div>
 
-      <div className="bg-terracotta py-8 px-4">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-white text-center sm:text-left">
-            <div className="font-playfair text-xl font-bold mb-1">📘 Free: The Caregiver&apos;s Companion Guide</div>
-            <div className="text-white/80 font-lato text-sm">A 20-page resource covering daily care, communication, burnout prevention & more.</div>
-          </div>
-          <Link href="/contact" className="shrink-0 bg-white text-terracotta hover:bg-cream font-lato font-semibold px-6 py-2.5 rounded-full transition-colors">Download Free →</Link>
+      <div className="py-16 px-4">
+        <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-cream-dark p-8 sm:p-10 mb-14">
+          <h2 className="font-playfair text-2xl font-bold text-charcoal mb-4">Nothing Is Downloadable Yet</h2>
+          <p className="font-lato text-charcoal/70 leading-relaxed mb-4">
+            There are no finished guides on this site today. Rather than list downloads that
+            do not exist, here is the actual roadmap, in the order things are being written.
+          </p>
+          <p className="font-lato text-charcoal/70 leading-relaxed">
+            If you need something now, write in and describe your situation. Sometimes the
+            answer is a phone call rather than a PDF, and that is available today.
+          </p>
         </div>
-      </div>
 
-      <div className="py-20 px-4">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((c) => (
-            <div key={c.title} className="bg-white rounded-2xl p-7 border border-cream-dark hover:shadow-lg transition-all flex flex-col">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          {planned.map((c) => (
+            <div key={c.title} className="bg-white rounded-2xl p-7 border border-cream-dark flex flex-col">
               <div className={`w-14 h-14 rounded-xl ${c.bg} flex items-center justify-center mb-5`}>{c.icon}</div>
               <h3 className="font-playfair text-xl font-bold text-charcoal mb-2">{c.title}</h3>
-              <p className="text-sm text-charcoal/60 font-lato mb-4 leading-relaxed">{c.desc}</p>
-              <ul className="space-y-2 mb-6 flex-1">
-                {c.items.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-charcoal/70 font-lato">
-                    <CheckCircle className="w-4 h-4 text-teal shrink-0" />{item}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/contact" className="inline-flex items-center gap-1.5 text-teal font-lato font-semibold text-sm hover:gap-2.5 transition-all group">
-                Access Resources <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <p className="text-sm text-charcoal/60 font-lato leading-relaxed">{c.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center mt-14">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-8 py-3.5 rounded-full font-lato font-semibold transition-colors"
+          >
+            Tell Us What You Need First <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </div>
