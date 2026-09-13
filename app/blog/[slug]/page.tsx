@@ -19,13 +19,16 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   if (!post) return { title: "Not found | Aging With Honor" }
 
+  // seoTitle drives the search result; title stays the headline on the page.
+  const metaTitle = post.seoTitle ?? post.title
+
   return {
-    title: `${post.title} | Aging With Honor`,
+    title: `${metaTitle} | Aging With Honor`,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       type: "article",
-      title: post.title,
+      title: metaTitle,
       description: post.description,
       publishedTime: post.date,
       url: `${SITE}/blog/${post.slug}`,
@@ -110,7 +113,7 @@ export default async function PostPage({ params }: Params) {
       <div className="py-16 px-4">
         <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-cream-dark p-7 sm:p-12">
           <div
-            className="prose prose-lg max-w-none font-lato prose-headings:font-playfair prose-headings:text-teal prose-a:text-teal prose-strong:text-charcoal prose-p:text-charcoal/75 prose-li:text-charcoal/75 prose-blockquote:border-l-terracotta prose-blockquote:text-charcoal/70"
+            className="prose prose-lg max-w-none font-lato prose-headings:font-playfair prose-headings:text-teal prose-a:text-teal prose-strong:text-charcoal prose-p:text-charcoal/75 prose-li:text-charcoal/75 prose-blockquote:border-l-terracotta prose-blockquote:text-charcoal/70 prose-table:text-base prose-th:text-charcoal prose-td:text-charcoal/75"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </article>
