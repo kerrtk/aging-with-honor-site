@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react"
+import { SubscribeForm } from "@/components/subscribe-form"
 
 const inProgress = [
   {
@@ -44,24 +45,31 @@ export function WhatsComing() {
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 sm:p-10 text-center max-w-2xl mx-auto shadow-xl">
-          <div className="w-14 h-14 rounded-full bg-terracotta/10 flex items-center justify-center mx-auto mb-5">
-            <Mail className="w-7 h-7 text-terracotta" />
+        <div className="bg-white rounded-2xl p-8 sm:p-10 max-w-xl mx-auto shadow-xl">
+          <div className="text-center mb-7">
+            <h3 className="font-playfair text-2xl font-bold text-charcoal mb-3">
+              Know When It Is Ready
+            </h3>
+            <p className="font-lato text-charcoal/65 leading-relaxed">
+              Leave your email and you will hear from us when the first guide is
+              finished. That is the only reason we will write to you.
+            </p>
           </div>
-          <h3 className="font-playfair text-2xl font-bold text-charcoal mb-3">
-            Tell Us What You Are Facing
-          </h3>
-          <p className="font-lato text-charcoal/65 leading-relaxed mb-7">
-            The fastest way to shape what gets written first is to say what you needed
-            and could not find. Write to us directly. A real person reads every one.
-          </p>
-          <a
-            href="mailto:kerr.systems@gmail.com?subject=Aging%20With%20Honor"
-            className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white font-lato font-semibold px-8 py-3.5 rounded-full transition-colors"
-          >
-            <Mail className="w-4 h-4" />
-            kerr.systems@gmail.com
-          </a>
+
+          <SubscribeForm source="homepage" />
+
+          <div className="mt-7 pt-6 border-t border-cream-dark text-center">
+            <p className="font-lato text-sm text-charcoal/60 mb-2">
+              Would rather just talk to a person?
+            </p>
+            <a
+              href="mailto:kerr.systems@gmail.com?subject=Aging%20With%20Honor"
+              className="inline-flex items-center gap-2 font-lato font-semibold text-sm text-teal hover:text-teal-dark transition-colors"
+            >
+              <Mail className="w-4 h-4" aria-hidden="true" />
+              kerr.systems@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </section>
