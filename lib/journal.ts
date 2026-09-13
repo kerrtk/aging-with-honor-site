@@ -7,6 +7,8 @@ const JOURNAL_DIR = path.join(process.cwd(), "content/journal")
 export type Post = {
   slug: string
   title: string
+  /** Optional. Overrides the <title> tag and OG title; `title` stays the H1. */
+  seoTitle?: string
   description: string
   date: string
   category: string
@@ -33,6 +35,7 @@ function readAll(): Post[] {
       return {
         slug: file.replace(/\.md$/, ""),
         title: String(data.title ?? "Untitled"),
+        seoTitle: data.seoTitle ? String(data.seoTitle) : undefined,
         description: String(data.description ?? ""),
         date: String(data.date ?? ""),
         category: String(data.category ?? "Journal"),
