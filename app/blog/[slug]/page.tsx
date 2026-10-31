@@ -5,7 +5,7 @@ import { marked } from "marked"
 import { ArrowLeft, Calendar, Clock } from "lucide-react"
 import { getPost, getPosts, formatDate } from "@/lib/journal"
 
-const SITE = "https://agingwithhonor.com"
+const SITE = "https://www.agingwithhonor.com"
 
 type Params = { params: Promise<{ slug: string }> }
 

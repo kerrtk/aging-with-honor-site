@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPosts } from "@/lib/journal";
 
-const BASE = "https://agingwithhonor.com";
+const BASE = "https://www.agingwithhonor.com";
 
 // Pages with real content are listed here. As /courses, /community and
 // /caregiver-resources are filled in, remove their `robots` noindex flag and
