@@ -1,6 +1,6 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
 
-const BASE = "https://agingwithhonor.com"
+const BASE = "https://www.agingwithhonor.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -10,5 +10,5 @@ export default function robots(): MetadataRoute.Robots {
     },
     sitemap: `${BASE}/sitemap.xml`,
     host: BASE,
-  }
+  };
 }
