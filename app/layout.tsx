@@ -8,7 +8,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 const lato = Lato({ subsets: ["latin"], weight: ["300", "400", "700"], variable: "--font-lato", display: "swap" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.agingwithhonor.com"),
+  metadataBase: new URL("https://agingwithhonor.com"),
   title: "Aging With Honor | Plan Today. Honor Tomorrow.",
   description: "Empowering families, caregivers, and seniors through trusted education, uplifting resources, and compassionate community support.",
   openGraph: {
